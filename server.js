@@ -9,7 +9,7 @@ server.route(routes.clinics.postcode)
 server.route(routes.clinics.city)
 
 // don't call server.start if you are testing
-// instead you can use server.inject to test handlers
+// instead you can use server.inject to test the routes
 
 if (!module.parent) {
   server.start(err => {
