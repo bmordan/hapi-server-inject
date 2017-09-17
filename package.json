@@ -1,0 +1,20 @@
+{
+  "name": "with-server",
+  "version": "1.0.0",
+  "description": "Home Office tech test",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest"
+  },
+  "author": "bmordan",
+  "license": "ISC",
+  "dependencies": {
+    "boom": "^5.2.0",
+    "hapi": "^16.6.0",
+    "jest": "^21.1.0",
+    "joi-browser": "^10.6.1",
+    "node-require-directory": "^1.0.2",
+    "postcode": "^0.2.5"
+  }
+}
