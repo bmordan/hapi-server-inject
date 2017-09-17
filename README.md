@@ -1,4 +1,4 @@
-# Bernard Mordan
+# Bernard Mordan [![CircleCI](https://circleci.com/gh/bmordan/hapi-server-inject/tree/master.svg?style=svg)](https://circleci.com/gh/bmordan/hapi-server-inject/tree/master)
 
 Clone the repo and run `npm install`. You can run the unit tests with `npm test`.
 
