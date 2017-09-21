@@ -41,6 +41,23 @@ describe('/clinics/postcode/:postcode', () => {
       })
   })
 
+  test('returns a filtered array of results', () => {
+    const testRoute = {
+      method: 'GET',
+      url: '/clinics/postcode/CR01AA'
+    }
+
+    const matches = {
+      results: []
+    }
+
+    return server.inject(testRoute)
+      .then((res) => {
+        expect(res.statusCode).toBe(200)
+        expect(JSON.parse(res.payload)).toEqual(matches)
+      })
+  })
+
   test('must pass a valid postcode', () => {
     const testRoute = {
       method: 'GET',

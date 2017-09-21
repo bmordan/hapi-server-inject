@@ -17,7 +17,11 @@ module.exports = {
 
     const results = datastore.result
       .filter(clinic => clinic.partial_postcode === outcode)
-      .filter(clinic => postcode.normalise(clinic.postcode) === postcode.normalise())
+      .filter(clinic => {
+        const clinicPostcode = clinic.postcode.toLowerCase().split(' ').join('')
+        const requestPostcode = postcode.normalise().toLowerCase().split(' ').join('')
+        return clinicPostcode === requestPostcode
+      })
       .map(clinic => {
         const { organisation_id, name } = clinic
         return { organisation_id, name }
